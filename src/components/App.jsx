@@ -16,8 +16,8 @@ import { DesktopApp } from './DesktopApp/DesktopApp';
 
 const Login = lazy(() => import('../pages/LoginPage'));
 const Register = lazy(() => import('../pages/RegisterPage'));
-const Diary = lazy(() => import('../pages/DiaryPage'));
-const Calculator = lazy(() => import('../pages/CalculatorPage'));
+// const Diary = lazy(() => import('../pages/DiaryPage'));
+// const Calculator = lazy(() => import('../pages/CalculatorPage'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 export const App = () => {
@@ -47,14 +47,14 @@ export const App = () => {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Navigate to="home" />} />
-            <Route
+            {/* <Route
               path="home"
               element={
                 <PublicRoute restricted>
                   <Home />
                 </PublicRoute>
               }
-            />
+            /> */}
             <Route
               path="login"
               element={
@@ -71,7 +71,7 @@ export const App = () => {
                 </PublicRoute>
               }
             />
-            <Route
+            {/* <Route
               path="diary"
               element={
                 <PrivateRoute>
@@ -86,7 +86,7 @@ export const App = () => {
                   <Calculator />
                 </PrivateRoute>
               }
-            />
+            /> */}
             <Route
               path="desktop"
               element={
