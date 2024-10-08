@@ -46,7 +46,7 @@ const LoginPage = () => {
     const user = await loginUser(values).unwrap();
     // console.log('login user', user);
     dispatch(setUser(user));
-    navigate(routes.diary);
+    // navigate(routes.diary);
     resetForm();
   };
 
